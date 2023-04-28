@@ -45,13 +45,16 @@ const createCapsuleReference = (capsuleReferenceObject) => {
 const ashivaMenuNavigationCapsuleReference = document.createComment('[' + createCapsuleReference(ashivaMenuNavigationObject) + ']');
 
 
-// =================================
-// =================================
+```
+
+______
 
 
-// EXAMPLE OF createCapsuleReference
-// ---------------------------------
 
+
+## Example of `createCapsuleReference`
+
+```js
 let ashToggleInputObject = {
   capsuleName: 'Ash_Toggle_Input',
   publisher: 'Ash',
@@ -60,8 +63,7 @@ let ashToggleInputObject = {
 
 console.log('[<Ash_Toggle_Input (Ash) position="on">]'); // [<Ash_Toggle_Input (Ash) position="on">]
 console.log('[' + createCapsuleReference(ashToggleInputObject) + ']'); // [<Ash_Toggle_Input (Ash) position="on">]
-
-
 ```
+
 
 
