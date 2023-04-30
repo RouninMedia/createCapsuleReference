@@ -29,7 +29,9 @@ const createCapsuleReference = (capsuleReferenceObject) => {
 
   let capsuleReference = '<';
   capsuleReference += capsuleReferenceObject.capsuleName;
-  capsuleReference += ' (' + capsuleReferenceObject.publisher + ')';
+  capsuleReference += ' (' + capsuleReferenceObject.publisher;
+  capsuleReference += (capsuleImprint.length > 0) ? ':' + capsuleImprint.join(':') : '';
+  capsuleReference += ')';
   capsuleReference += (classList.length > 0) ? ' [+]class="' + classList.join(' ') + '"' : '';
   capsuleReference += (Array.isArray(StrongModifiers)) ? ' ' + Object.values(StrongModifiers).map((StrongModifier) => `${StrongModifier.charAt(0).toUpperCase() + StrongModifier.slice(1)}`).join(' ') : ' ' + Object.keys(StrongModifiers).map((StrongModifier) => `${StrongModifier.charAt(0).toUpperCase() + StrongModifier.slice(1)}="${StrongModifiers[StrongModifier].charAt(0).toUpperCase() + StrongModifiers[StrongModifier].slice(1)}"`).join(' ');
   capsuleReference += ' ' + Object.keys(attributes).map((attribute) => `[+]${attribute}="${attributes[attribute]}"`).join(' '); 
