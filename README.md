@@ -19,6 +19,7 @@ let ashivaMenuNavigationObject = {
 
 const createCapsuleReference = (capsuleReferenceObject) => {
 
+  let capsuleImprint = (capsuleReferenceObject.hasOwnProperty('capsuleImprint')) ? capsuleReferenceObject.capsuleImprint : [];
   let StrongModifiers = (capsuleReferenceObject.hasOwnProperty('StrongModifiers')) ? capsuleReferenceObject.StrongModifiers : {};
   let classList = (capsuleReferenceObject.hasOwnProperty('classList')) ? capsuleReferenceObject.classList : [];
   let attributes = (capsuleReferenceObject.hasOwnProperty('attributes')) ? capsuleReferenceObject.attributes : {};
